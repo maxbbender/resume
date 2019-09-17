@@ -24,9 +24,6 @@
   quote: >
     TALOS (Textual Augmentation Learning of Semantics), a Web-based platform for vocabulary acquisition that provides capabilities for analytics to support learning of vocabulary. This software prototype, currently in beta-testing, supports differentiated learning as well as common coursework, allowing users to contribute and access text while promoting ease of reading.
   description: | # this will include new lines to allow paragraphs
-    The first real website I made for someone other than myself. Written in <mark>PHP</mark> in a summer alongisde working at the Marist College HelpDesk, this website was part of a research project that funded me to present at [INTED](https://iated.org/inted/) in Madrid, Spain. Alongside two proffessors, I gave a presentation on using technology to enhance learning in an un-obtrusive fassion with a concentration in learning foreing languages. 
+    The first real website I made for someone other than myself. Written in <mark>PHP</mark> in a summer alongside working at the Marist College HelpDesk, this website was part of a research project that funded me to present at [INTED](https://iated.org/inted/) in Madrid, Spain. Alongside two professors, I gave a presentation on using technology to enhance learning in an un-obtrusive fashion with a concentration in learning foreign languages. 
 
     Backed by a <mark>MySQL</mark> database this is where I learned a lot about security in the modern age of web-development. Certain vulnerabilities such as SQL Injections and XSS were ones that I focused on researching because I knew they were some of the more common avenues of attack. Looking back on it however I have already noticed some mistakes but I was happy with how it came out.
-
-
-    https://github.com/maxbbender/Viral-Education
