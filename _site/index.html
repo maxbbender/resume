@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="CICD Architect and Principal Engineer" />
 <script type="application/ld+json">
-{"description":"My Resume","@type":"WebSite","headline":"CICD Architect and Principal Engineer","url":"http://localhost:4000/","name":"CICD Architect and Principal Engineer","@context":"http://schema.org"}</script>
+{"description":"My Resume","@type":"WebSite","url":"http://localhost:4000/","name":"CICD Architect and Principal Engineer","headline":"CICD Architect and Principal Engineer","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <link rel="shortcut icon" type="image/x-icon" href=""></head>
@@ -55,11 +55,7 @@
 
 <p>Why I call myself just a Jr. Principal Engineer is because there are a lot attributes of what Silvia talks about that I was already doing in my day to day job, but not quite at the same scale. I have a lot of experience to gain in being an influencer, but at IBM I feel like I fit the role of the <em>force multiplier</em> pretty well.</p>
 
-<p>My job at IBM is to test software on Linux on Z and through that I got exposure to many technologies: <mark>Docker</mark>, <mark>Kubernetes</mark>, <mark>Ansible</mark>, <mark>Jenkins</mark> and <mark>Chef</mark> to name a few. This has been the perfect opportunity because <strong>I love to learn</strong> new things and have been told I have good knack at teaching what I have learned. Seeing that light bulb go off when explaining how to construct a Dockerfile, then using <mark>Travis</mark> to build that code via <mark>GitHub</mark> in regression is my favorite part of my job. <em>closely followed by figuring out that bug that’s been plaguing me all week</em></p>
-
 <p>Primarily, my work has been on CICD and DevOps solutions, but I often get this itch to create something new. <mark>Python</mark> is my go-to scripting language but I’m not afraid of a little <mark>Bash</mark> or <mark>Ruby</mark> if the use-case calls for it or I am trying to work with a library that requires the aforementioned (i.e <mark>Chef</mark>). The instant gratification of making websites and working with complex relational database setups is a puzzle that I relish. Using <mark>Flask</mark> and <mark>SQLAlchemy</mark> I have put together some complex websites as a consultant on the side. See the NexNest project as an example.</p>
-
-<p>If I were to point to a shining accomplishment these past two years it was my port of <mark>Travis</mark> to the Mainframe. IBM has long been interested in enabling CICD and automation tools to be used by Open Source communities and internally to compile and test packages on s390x. Internally we can now build our packages in regression on the mainframe with Travis and hopefully soon the public will be able to too!</p>
 
     </div>
   </div>
@@ -74,10 +70,8 @@
           <i class="fa fa-github" title="NexNest Github link"></i>
         </a>
       </p></div>
-  <div class="col-xs-12 col-print-12"><p class="quote">A Website made with love by @Max Bender and @Mike Mcginnis
-</p><p>I had written a couple website with <mark>Flask</mark> in school, but wanted to learn more and read up on <a href="https://blog.miguelgrinberg.com/">Miguel Grinberg</a>’s tutorial on Flask and was exposed to a new set of best practices. Approached with an idea for a rental website targeted at students we designed and implemented a website written in <mark>Python</mark>.</p>
-
-<p>The website was backed by a fairly complex database that featured notifications and recursive comments. <mark>SQLAlchemy</mark> handles most of the direct SQL queries and more of the complex <code class="highlighter-rouge">JOIN</code>s. See the implementation here <a href="https://github.com/maxbbender/nexnest/blob/master/docs/erd.pdf">https://github.com/maxbbender/nexnest/blob/master/docs/erd.pdf</a>.</p>
+  <div class="col-xs-12 col-print-12"><p class="quote">Student housing portal built with love by @Max Bender and @Mike Mcginnis
+</p><p>I had written a couple website with <mark>Flask</mark> in school, but wanted to learn more and read up on <a href="https://blog.miguelgrinberg.com/">Miguel Grinberg</a>’s Flask tutorial and was exposed to a new set of best practices. Approached with an idea for a rental website targeted at students we designed and implemented a website written in <mark>Python</mark>. Backed by a fairly complex database that featured notifications and recursive comments, <mark>SQLAlchemy</mark> handles most of the direct SQL queries the complex <code class="highlighter-rouge">JOIN</code>s. See the ERD <a href="https://github.com/maxbbender/nexnest/blob/master/docs/erd.pdf">here</a>.</p>
 
   </div>
 </div>
@@ -90,8 +84,28 @@
           <i class="fa fa-github" title="Travis on Z Github link"></i>
         </a>
       </p></div>
-  <div class="col-xs-12 col-print-12"><p class="quote">Enable the tool that enables the tools on IBM's Mainframe
-</p><p>loreip</p>
+  <div class="col-xs-12 col-print-12"><p class="quote">Enabling the tool that enables the tools - on Linux on Z
+</p><p>A big part of my voyage in OpenSource has been learning how to use CICD tools to build automation around a product. For me it was a necessity, because the tediousness of re-running builds had gotten to vast. Travis offers a free CICD mechanism hooked natively into GitHub and many of the projects I was looking at were using it in their pipelines.</p>
+
+<p>Internally we had a <mark>Travis</mark> environment for x86 and ppc64le, but none for s390x. I was tasked with supporting Travis on Linux on Z and so began a month dive into the source code of Travis. With this we were able to enable a regression pipeline for the release for IBM Cloud Private (ICP) on Z, a <mark>Kubernetes</mark> offering by IBM.</p>
+
+  </div>
+</div>
+
+  
+    <div class="row clearfix layout layout-top-middle">
+  <div class="col-xs-12 col-print-12 details"><h4>Viral Education / TALOS</h4>
+<a href="//github.com/maxbbender/Viral-Education" target="_blank" class="link">github.com/maxbbender/Viral-Education</a><p class="no-print">
+        <a href="https://github.com/https://github.com/maxbbender/Viral-Education" target="_blank">
+          <i class="fa fa-github" title="Viral Education / TALOS Github link"></i>
+        </a>
+      </p></div>
+  <div class="col-xs-12 col-print-12"><p class="quote">TALOS (Textual Augmentation Learning of Semantics), a Web-based platform for vocabulary acquisition that provides capabilities for analytics to support learning of vocabulary. This software prototype, currently in beta-testing, supports differentiated learning as well as common coursework, allowing users to contribute and access text while promoting ease of reading.
+</p><p>The first real website I made for someone other than myself. Written in <mark>PHP</mark> in a summer alongisde working at the Marist College HelpDesk, this website was part of a research project that funded me to present at <a href="https://iated.org/inted/">INTED</a> in Madrid, Spain. Alongside two proffessors, I gave a presentation on using technology to enhance learning in an un-obtrusive fassion with a concentration in learning foreing languages.</p>
+
+<p>Backed by a <mark>MySQL</mark> database this is where I learned a lot about security in the modern age of web-development. Certain vulnerabilities such as SQL Injections and XSS were ones that I focused on researching because I knew they were some of the more common avenues of attack. Looking back on it however I have already noticed some mistakes but I was happy with how it came out.</p>
+
+<p>https://github.com/maxbbender/Viral-Education</p>
 
   </div>
 </div>
@@ -102,10 +116,26 @@
   <h3>Experience</h3>
   
     <div class="row clearfix layout layout-left">
-  <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details"><h4>The Boring Company</h4>
-<a href="//boringcompany.com" target="_blank" class="link">boringcompany.com</a><p><b>Senior Network System Administrator</b></p><p>November 2017 - Present</p></div>
-  <div class="col-xs-12 col-sm-8 col-md-9 col-print-12"><p class="quote">Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
-</p><p>Every company needs its networks properly administered and The Boring Compay is no exception. Digging holes is hard and I play my part making sure the whole company stays connected. I lead a team of 5 people and enjoy driving the company to try new technologies.</p>
+  <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details"><h4>IBM</h4>
+<a href="https://www.ibm.com/us-en/" target="_blank" class="link">https://www.ibm.com/us-en/</a><p><b>Principal Test Engineer</b></p><p>December 2015 - Present</p></div>
+  <div class="col-xs-12 col-sm-8 col-md-9 col-print-12"><p class="quote">IBM produces and sells computer hardware, middleware and software, and provides hosting and consulting services in areas ranging from mainframe computers to nanotechnology.
+</p><p>At IBM I started on the zPET solution test orginization which tests the mainframe in a full stack customer-like configuration. Shortly after I moved to a team called the Linux Center of Competence which focused on testing Linux on Z with a similar configuration as on zPET. Part of the teams mission was to remove excuses when it came to running software on Linux on Z.</p>
+
+<p>To enable software on Linux on Z our team hosts multiple Kubernetes development clusters and an <mark>OpenStack</mark> environment supporting 30+ internal teams. However many of these teams have no Linux on Z experience so we built education modules to assist in onboarding. See the “Let’s Talk” section for some more information.</p>
+
+<p>This was a manual process to onboard each of these teams and we quickly found we needed a better solution. IBM uses GitHub and Travis but up until this point you couldn’t run Travis builds on s390x. Our team was tasked with the mission to enable Travis on Z which opens up the door to the entire orginization of 400,000 people. Internally we can now build our packages in regression on the mainframe with Travis and hopefully soon the public will be able to too! See “Travis on Z” for more information.</p>
+
+<p>Through testing Linux on Z I got exposure to many technologies: <mark>Docker</mark>, <mark>Kubernetes</mark>, <mark>Ansible</mark>, <mark>Jenkins</mark> and <mark>Chef</mark> to name a few. This has been the perfect opportunity because <strong>I love to learn</strong> new things and have been told I have good knack at teaching what I have learned. Seeing that light bulb go off when explaining how to construct a Dockerfile, then using <mark>Travis</mark> to build that code via <mark>GitHub</mark> in regression is my favorite part of my job. <em>closely followed by figuring out that bug that’s been plaguing me all week</em></p>
+
+  </div>
+</div>
+
+  
+    <div class="row clearfix layout layout-left">
+  <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details"><h4>Marist College Help Desk</h4>
+<a href="https://www.marist.edu/" target="_blank" class="link">https://www.marist.edu/</a><p><b>Help Desk Operator</b></p><p>September 2014 - December 2015</p></div>
+  <div class="col-xs-12 col-sm-8 col-md-9 col-print-12"><p class="quote">The Marist College Help Desk serves as the single point of contact between students, faculty and staff and the Information Technology Department. 
+</p><p>While my time at the Help Desk wasn’t the most glamourus, I valued it a lot. I was resetting passwords and helping people out with basic technology issues but during that I was gaining so much expereience in talking with customers. We were on the phone or helping people in person and looking back on it this experience has strengethed my ability to interact with customers in the field at IBM.</p>
 
   </div>
 </div>
@@ -116,11 +146,18 @@
   <h3>Education</h3>
   
     <div class="row clearfix layout layout-left">
-  <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details"><h4>Harvard University</h4><p><b>BSc Computer Science</b></p><p>2010 - 2013</p></div>
-  <div class="col-xs-12 col-sm-8 col-md-9 col-print-12"><p class="quote">Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
-</p><p>During my time at Harvard I learnt most of my key skills that have I have taken through my career such as teamwork and working to tight deadlines. I thouroughly enjoyed my time as university and learnt a lot about a healthy work life balance.</p>
+  <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details"><h4>Marist College</h4><p><b>BSc Computer Science</b></p><p>2014 - 2017</p></div>
+  <div class="col-xs-12 col-sm-8 col-md-9 col-print-12"><p class="quote">Founded in 1905, Marist was formed by the Marist Brothers, a Catholic religious institute of Brothers, to prepare brothers for their vocations as educators. Marist offers a comprehensive liberal arts education, offering 56 undergraduate and graduate degree programs and 21 certificate programs.
+</p><p>Participated in the MCCS and many other community activities which strengthend my value as a teamate and leader. Graduated w/ my Major’s GPA at 3.8 with Honors and Deans List.</p>
 
-<p>I spent a lot of my free time as a committee member of the <em>Harvard Mountaineering Club</em> taking on roles such as <em>Trip Secretary</em> and <em>Vice-President</em>.</p>
+  </div>
+</div>
+
+  
+    <div class="row clearfix layout layout-left">
+  <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details"><h4>Moses Brown</h4><p><b>High School</b></p><p>2011 - 2014</p></div>
+  <div class="col-xs-12 col-sm-8 col-md-9 col-print-12"><p class="quote">Moses Brown School is a Quaker school located in Providence, Rhode Island offering pre-kindergarten through secondary school classes.
+</p>
 
   </div>
 </div>
@@ -131,12 +168,12 @@
   <h3>A Little More About Me</h3>
   <div class="row clearfix">
     <div class="col-md-12">
-      <p>Alongside my interests in networks and software engineering some of my other interests and hobbies are:</p>
+      <p>Alongside my interests in DevOps and Software Development some of my other interests and hobbies are:</p>
 <ul>
-  <li>Rock climbing</li>
-  <li>Gaming</li>
-  <li>Knitting</li>
-  <li><a href="https://www.youtube.com/watch?v=vtg4o__aRMg">Becoming a ninja</a></li>
+  <li>Cooking</li>
+  <li>Competitive Gaming</li>
+  <li>Playing with my pupper Zoey
+ -</li>
 </ul>
 
     </div>

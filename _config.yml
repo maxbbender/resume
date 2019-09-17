@@ -32,12 +32,7 @@ about_content: | # this will include new lines to allow paragraphs
 
   Why I call myself just a Jr. Principal Engineer is because there are a lot attributes of what Silvia talks about that I was already doing in my day to day job, but not quite at the same scale. I have a lot of experience to gain in being an influencer, but at IBM I feel like I fit the role of the *force multiplier* pretty well.
 
-  My job at IBM is to test software on Linux on Z and through that I got exposure to many technologies: <mark>Docker</mark>, <mark>Kubernetes</mark>, <mark>Ansible</mark>, <mark>Jenkins</mark> and <mark>Chef</mark> to name a few. This has been the perfect opportunity because **I love to learn** new things and have been told I have good knack at teaching what I have learned. Seeing that light bulb go off when explaining how to construct a Dockerfile, then using <mark>Travis</mark> to build that code via <mark>GitHub</mark> in regression is my favorite part of my job. *closely followed by figuring out that bug that's been plaguing me all week*
-
   Primarily, my work has been on CICD and DevOps solutions, but I often get this itch to create something new. <mark>Python</mark> is my go-to scripting language but I'm not afraid of a little <mark>Bash</mark> or <mark>Ruby</mark> if the use-case calls for it or I am trying to work with a library that requires the aforementioned (i.e <mark>Chef</mark>). The instant gratification of making websites and working with complex relational database setups is a puzzle that I relish. Using <mark>Flask</mark> and <mark>SQLAlchemy</mark> I have put together some complex websites as a consultant on the side. See the NexNest project as an example.
-
-  If I were to point to a shining accomplishment these past two years it was my port of <mark>Travis</mark> to the Mainframe. IBM has long been interested in enabling CICD and automation tools to be used by Open Source communities and internally to compile and test packages on s390x. Internally we can now build our packages in regression on the mainframe with Travis and hopefully soon the public will be able to too!
-
 # Projects Section
 # projects_title: Projects
 
@@ -50,11 +45,10 @@ about_content: | # this will include new lines to allow paragraphs
 # More Section
 # more_title: A Little More About Me
 more_content: | # this will include new lines to allow paragraphs
-  Alongside my interests in networks and software engineering some of my other interests and hobbies are:
-   - Rock climbing
-   - Gaming
-   - Knitting
-   - [Becoming a ninja](https://www.youtube.com/watch?v=vtg4o__aRMg)
+  Alongside my interests in DevOps and Software Development some of my other interests and hobbies are:
+   - Cooking
+   - Competitive Gaming
+   - Playing with my pupper Zoey
 
 # Footer
 footer_show_references: true
