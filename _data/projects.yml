@@ -1,12 +1,4 @@
 - layout: top-middle
-  name: NexNest
-  link: github.com/maxbbender/nexnest
-  github: https://github.com/maxbbender/nexnest
-  quote: >
-    Student housing portal built with love by @Max Bender and @Mike Mcginnis
-  description: | # this will include new lines to allow paragraphs
-    I had written a couple websites with <mark>Flask</mark> in school, but wanted to learn more and read up on [Miguel Grinberg](https://blog.miguelgrinberg.com/)'s Flask tutorial and was exposed to a new set of best practices. Approached with an idea for a rental website targeted at students we designed and implemented a website written in <mark>Python</mark>. Backed by a fairly complex database that featured notifications and recursive comments, <mark>SQLAlchemy</mark> handles most of the direct SQL queries the complex `JOIN`s. See the ERD [here](https://github.com/maxbbender/nexnest/blob/master/docs/erd.pdf). 
-- layout: top-middle
   name: Travis on Z
   link: github.com/bendermIBM/travis-cookbooks
   github: https://github.com/bendermIBM/travis-cookbooks
@@ -16,6 +8,30 @@
     A big part of my voyage in OpenSource has been learning how to use CICD tools to build automation around a product. For me it was a necessity, because the tediousness of re-running builds had gotten to vast. Travis offers a free CICD mechanism hooked natively into GitHub and many of the projects I was looking at were using it in their pipelines.
 
     Internally we had a <mark>Travis</mark> environment for x86 and ppc64le, but none for s390x. I was tasked with supporting Travis on Linux on Z and so began a month dive into the source code of Travis. With this we were able to enable a regression pipeline for the release for IBM Cloud Private (ICP) on Z, a <mark>Kubernetes</mark> offering by IBM. 
+
+- layout: top-middle
+  name: IBM Cloud Private - Content Development Clusters
+  link: https://www.ibm.com/cloud/private
+  quote: >
+    IBM Cloud™ Private is a reliable and scalable cloud platform that runs on your infrastructure. It’s built on open source frameworks, like containers, Kubernetes and Cloud Foundry. 
+  description: | # this will include new lines to allow paragraphs
+    My team was tasked with supporting a release of IBM Cloud Private (ICP), a <mark>Kubernetes</mark> offering by IBM, on Linux on Z. Our goal was to have full support by the 3.1.2 release and to do this we ported Travis to the Mainframe as mentioned above.
+
+    Alongside these efforts we saw an opportunity to further drive our teams mission, **to remove excuses; specifically surrounding running your application on Linux on Z**. I was responsible for provisioning and supporting 3 production ICP clusters that served as a Content Development portal and hosting utility for around 25 teams at IBM, 200+ people. 
+
+    Our goal was to stay current with the releases of ICP so we supported an N-1, N and N+1 configuration where N was the current GA version of ICP. About once a quarter we had to cycle our clusters so quickly I realized that automation was necessary for my own sanity. Using <mark>Terraform</mark> we would interact with <mark>OpenStack</mark> to provision around 10 `s390x` (Z) nodes and 3 `x86` nodes. After the nodes were provisioned I would utilize <mark>Ansible</mark> to configure those nodes with some packages, custom security policies, users and files required for the install.
+
+    Post install I once again utilized <mark>Ansible</mark> to configure <mark>RBAC</mark> roles for the 25 teams part of the **Content Development Clusters**. Manually it took about an hour and a half to click through the web-ui, but with <mark>Ansible</mark> to interact with APIs and a little custom <mark>Python</mark> it only took around 6 minutes running in the background.
+    
+- layout: top-middle
+  name: NexNest
+  link: github.com/maxbbender/nexnest
+  github: https://github.com/maxbbender/nexnest
+  quote: >
+    Student housing portal built with love by @Max Bender and @Mike Mcginnis
+  description: | # this will include new lines to allow paragraphs
+    I had written a couple websites with <mark>Flask</mark> in school, but wanted to learn more and read up on [Miguel Grinberg](https://blog.miguelgrinberg.com/)'s Flask tutorial and was exposed to a new set of best practices. Approached with an idea for a rental website targeted at students we designed and implemented a website written in <mark>Python</mark>. Backed by a fairly complex database that featured notifications and recursive comments, <mark>SQLAlchemy</mark> handles most of the direct SQL queries the complex `JOIN`s. See the ERD [here](https://github.com/maxbbender/nexnest/blob/master/docs/erd.pdf). 
+
 
 - layout: top-middle
   name: Viral Education / TALOS
