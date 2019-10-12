@@ -11,7 +11,7 @@
 
     In collaboration with my team lead and STSM @ IBM, Jay Brenneman, we built and ported the Travis codebase to `s390x`. Jay focused on the hypervisor end, initially hooking <mark>OpenStack</mark> up to z/VM and eventually moving to <mark>KVM</mark> on Linux on Z. Meanwhile I focused on the provisioning tools that largely make up the magic of Travis. Largely this consisted of <mark>Chef</mark> cookbooks and custom bash scripts and took some 3 weeks to get our first working build, but it was glorious.
 
-    For the first time ever our developers were able to modify their Travis pipelines and run their builds on Linux on Z. However as they integrated the `s390x` builds, all of a sudden Travis on Z became mission critical to all of ICP development due to the nature of Travis and GitHub. If not all the tests pass Travis will block code from being merged into the `master` branch so when Travis on Z took an outage, the messages and alerts quickly started flooding in. After the second 3 day outage we quickly realized that we had to come up with a highly available solution for the tool. 
+    For the first time ever our developers were able to modify their Travis pipelines and run their builds on Linux on Z. However as they integrated the `s390x` builds, all of a sudden Travis on Z became mission critical to all of ICP development due to the nature of Travis and GitHub. If even one architectured failed to pass, Travis will block code from being merged into the `master` branch. When Travis on Z took an outage, the messages and alerts quickly started flooding in. After our second extended outage we quickly realized that we had to come up with a highly available solution for the tool. 
 
     Utilizing a load balancing feature in <mark>RabbitMQ</mark> we stood up another OpenStack instance located in Hursley, United Kingdom and replicated our port of Travis on Z to those systems. Since then we have been able to take independent outages without affecting an ever growing demand for Travis on Z.
 
@@ -43,7 +43,7 @@
 - layout: top-middle
   name: Let's Talk
   quote: >
-    Short hands on education modules surrounding a specific technology or using a group of technologies together.
+    Short hands-on education modules surrounding a specific technology or a group of technologies together.
   description: | # this will include new lines to allow paragraphs
     Teaching others and seeing that *lightbulb* go off is and experience that I get a lot of gratification from. In my effort to educate teams at IBM I realized that giving the same presentation to team after team was an inefficient method. So I created "Let's Talk" which is a group of education modules that have an intense focus on hands-on learning using examples hosted on GitHub. We scheduled live presentations and recorded them for future consumption and they featured code examples accompanied by a tutorial-like presentation. 
 
