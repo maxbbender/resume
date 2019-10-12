@@ -29,6 +29,8 @@
 
     Post install I once again utilized Ansible to configure <mark>RBAC</mark> roles for the 25 teams part of the Content Development Clusters. Manually it took about an hour and a half to click through the web-ui, but with Ansible to interact with APIs and a little custom <mark>Python</mark> it only took around 6 minutes running in the background.
 
+    Our team also used these clusters to host and port many different open source applications to Linux on Z. Using Travis on Z I containerized applications like <mark>Jenkins</mark>, <mark>OpenFaaS</mark>, <mark>Postgres</mark>, <mark>Redis</mark>, as well as custom application written in Python and Bash in regression. We use these examples to write public build scripts released by the [Linux on Z](https://github.com/linux-on-ibm-z) outreach team on GitHub. 
+
 - layout: top-middle
   name: NexNest
   link: github.com/maxbbender/nexnest
@@ -38,6 +40,24 @@
   description: | # this will include new lines to allow paragraphs
     I had written a couple websites with <mark>Flask</mark> in school, but wanted to learn more and read up on [Miguel Grinberg](https://blog.miguelgrinberg.com/)'s Flask tutorial and was exposed to a new set of best practices. Approached with an idea for a rental website targeted at students we designed and implemented a website written in <mark>Python</mark>. Backed by a fairly complex database that featured notifications and recursive comments, <mark>SQLAlchemy</mark> handles most of the direct SQL queries the complex `JOIN`s. See the ERD [here](https://github.com/maxbbender/nexnest/blob/master/docs/erd.pdf). 
 
+- layout: top-middle
+  name: Let's Talk
+  quote: >
+    Short hands on education modules surrounding a specific technology or using a group of technologies together.
+  description: | # this will include new lines to allow paragraphs
+    Teaching others and seeing that *lightbulb* go off is and experience that I get a lot of gratification from. In my effort to educate teams at IBM I realized that giving the same presentation to team after team was an inefficient method. So I created "Let's Talk" which is a group of education modules that have an intense focus on hands-on learning using examples hosted on GitHub. We scheduled live presentations and recorded them for future consumption and they featured code examples accompanied by a tutorial-like presentation. 
+
+    _**Example Let's Talk Modules**_
+
+    1. Docker
+    2. Docker Manifests & Travis
+    3. Kubernetes
+    4. Jenkins
+    5. Jenkins & Bash
+    6. Ansible
+    7. Jenkins & Ansible
+    8. Slack Tips & Tricks
+    9. Terraform
 
 - layout: top-middle
   name: Viral Education / TALOS
