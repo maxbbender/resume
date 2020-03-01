@@ -30,7 +30,13 @@ about_content: | # this will include new lines to allow paragraphs
 
   *"[during the time becoming a Principal Engineer you] need to be a force multiplier. There was a clear transition from me writing code to teaching others how to write code that's actually clean and doesn't cause us trouble too fast down the line. One of the big parts of Principal Engineering in my mind is you teach more than you actually do yourself."*
 
+<<<<<<< HEAD
   Primarily, my work has been on CICD and DevOps solutions, but I often get this itch to create something new. <mark>Python</mark> is my go-to scripting language but I'm not afraid of a little <mark>Bash</mark> or <mark>Ruby</mark> if the use-case calls for it or I am trying to work with a library that requires the aforementioned (i.e <mark>Chef</mark>). The instant gratification of making websites and working with complex relational database setups is a puzzle that I relish. Using <mark>Flask</mark> and <mark>SQLAlchemy</mark> I have put together some complex websites as a consultant on the side. See the NexNest project as an example.
+=======
+  Why I call myself just a Jr. Principal Engineer is because there are a lot attributes of what Silvia talks about that I was already doing in my day to day job, but not quite at the same scale. I have a lot of experience to gain in being an influencer, but at IBM I feel like I fit the role of the *force multiplier* pretty well.
+
+  Primarily, my work has been on CICD and DevOps solutions, but I often get this itch to create something new. <mark>Python</mark> is my go-to scripting language but I'm not afraid of a little <mark>Bash</mark> or <mark>Ruby</mark> if the use-case calls for it or I am trying to work with a library that requires the aforementioned (i.e <mark>Chef</mark>). The instant gratification of making websites and working with complex relational database setups is a puzzle that I relish. Using <mark>Flask</mark> and <mark>SQLAlchemy</mark> I have put together websites as a consultant on the side. See the NexNest project as an example.
+>>>>>>> a320d20a1f2d72c7de3481949bdb8c802c2b8a2b
 # Projects Section
 # projects_title: Projects
 

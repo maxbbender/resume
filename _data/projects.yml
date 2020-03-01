@@ -1,12 +1,4 @@
 - layout: top-middle
-  name: NexNest
-  link: github.com/maxbbender/nexnest
-  github: https://github.com/maxbbender/nexnest
-  quote: >
-    Student housing portal built with love by @Max Bender and @Mike Mcginnis
-  description: | # this will include new lines to allow paragraphs
-    I had written a couple websites with <mark>Flask</mark> in school, but wanted to learn more and read up on [Miguel Grinberg](https://blog.miguelgrinberg.com/)'s Flask tutorial and was exposed to a new set of best practices. Approached with an idea for a rental website targeted at students we designed and implemented a website written in <mark>Python</mark>. Backed by a fairly complex database that featured notifications and recursive comments, <mark>SQLAlchemy</mark> handles most of the direct SQL queries the complex `JOIN`s. See the ERD [here](https://github.com/maxbbender/nexnest/blob/master/docs/erd.pdf). 
-- layout: top-middle
   name: Travis on Z
   link: github.com/bendermIBM/travis-cookbooks
   github: https://github.com/bendermIBM/travis-cookbooks
@@ -15,7 +7,57 @@
   description: | # this will include new lines to allow paragraphs
     A big part of my voyage in OpenSource has been learning how to use CICD tools to build automation around a product. For me it was a necessity, because the tediousness of re-running builds had gotten to vast. Travis offers a free CICD mechanism hooked natively into GitHub and many of the projects I was looking at were using it in their pipelines.
 
-    Internally we had a <mark>Travis</mark> environment for x86 and ppc64le, but none for s390x. I was tasked with supporting Travis on Linux on Z and so began a month dive into the source code of Travis. With this we were able to enable a regression pipeline for the release for IBM Cloud Private (ICP) on Z, a <mark>Kubernetes</mark> offering by IBM. 
+    Internally we had a <mark>Travis</mark> environment for `x86` and `ppc64le`, but none for `s390x`. I was tasked with supporting Travis on Linux on Z and so began a month dive into the source code of Travis. With this we were able to enable a regression pipeline for the release for IBM Cloud Private (ICP) on Z, a <mark>Kubernetes</mark> offering by IBM. 
+
+    In collaboration with my team lead and STSM @ IBM, Jay Brenneman, we built and ported the Travis codebase to `s390x`. Jay focused on the hypervisor end, initially hooking <mark>OpenStack</mark> up to z/VM and eventually moving to <mark>KVM</mark> on Linux on Z. Meanwhile I focused on the provisioning tools that largely make up the magic of Travis. Largely this consisted of <mark>Chef</mark> cookbooks and custom bash scripts and took some 3 weeks to get our first working build, but it was glorious.
+
+    For the first time ever our developers were able to modify their Travis pipelines and run their builds on Linux on Z. However as they integrated the `s390x` builds, all of a sudden Travis on Z became mission critical to all of ICP development due to the nature of Travis and GitHub. If even one architecture fails to pass, Travis will block code from being merged into the `master` branch. When Travis on Z took an outage, the messages and alerts quickly started flooding in. After our second extended outage we quickly realized that we had to come up with a highly available solution for the tool. 
+
+    Utilizing a load balancing feature in <mark>RabbitMQ</mark> we stood up another OpenStack instance located in Hursley, United Kingdom and replicated our port of Travis on Z to those systems. Since then we have been able to take independent outages without affecting an ever growing demand for Travis on Z.
+
+- layout: top-middle
+  name: IBM Cloud Private - Content Development Clusters
+  link: https://www.ibm.com/cloud/private
+  quote: >
+    IBM Cloud™ Private is a reliable and scalable cloud platform that runs on your infrastructure. It’s built on open source frameworks, like containers, Kubernetes and Cloud Foundry. 
+  description: | # this will include new lines to allow paragraphs
+    My team was tasked with supporting a release of IBM Cloud Private (ICP), a <mark>Kubernetes</mark> offering by IBM, on Linux on Z. Our goal was to have full support by the 3.1.2 release and to do this we ported Travis to the Mainframe as mentioned above.
+
+    Alongside these efforts we saw an opportunity to further drive our teams mission, **to remove excuses; specifically surrounding running your application on Linux on Z**. I was responsible for provisioning and supporting 3 production ICP clusters that served as a Content Development portal and hosting utility for around 25 teams at IBM, 200+ people. 
+
+    Our goal was to stay current with the releases of ICP so we supported an N-1, N and N+1 configuration where N was the current GA version of ICP. About once a quarter we had to cycle our clusters so quickly I realized that automation was necessary for my own sanity. Using <mark>Terraform</mark> we would interact with <mark>OpenStack</mark> to provision around 10 `s390x` (Z) nodes and 3 `x86` nodes. After the nodes were provisioned I would utilize <mark>Ansible</mark> to configure those nodes with some packages, custom security policies, users and files required for the install.
+
+    Post install I once again utilized Ansible to configure <mark>RBAC</mark> roles for the 25 teams part of the Content Development Clusters. Manually it took about an hour and a half to click through the web-ui, but with Ansible to interact with APIs and a little custom <mark>Python</mark> it only took around 6 minutes running in the background.
+
+    Our team also used these clusters to host and port many different open source applications to Linux on Z. Using Travis on Z I containerized applications like <mark>Jenkins</mark>, <mark>OpenFaaS</mark>, <mark>Postgres</mark>, <mark>Redis</mark>, as well as custom application written in Python and Bash in regression. We use these examples to write public build scripts released by the [Linux on Z](https://github.com/linux-on-ibm-z) outreach team on GitHub. 
+
+- layout: top-middle
+  name: NexNest
+  link: github.com/maxbbender/nexnest
+  github: https://github.com/maxbbender/nexnest
+  quote: >
+    Student housing portal built with love by @Max Bender and @Mike Mcginnis
+  description: | # this will include new lines to allow paragraphs
+    I had written a couple websites with <mark>Flask</mark> in school, but wanted to learn more and read up on [Miguel Grinberg](https://blog.miguelgrinberg.com/)'s Flask tutorial and was exposed to a new set of best practices. Approached with an idea for a rental website targeted at students we designed and implemented a website written in <mark>Python</mark>. Backed by a fairly complex database that featured notifications and recursive comments, <mark>SQLAlchemy</mark> handles most of the direct SQL queries the complex `JOIN`s. See the ERD [here](https://github.com/maxbbender/nexnest/blob/master/docs/erd.pdf). 
+
+- layout: top-middle
+  name: Let's Talk
+  quote: >
+    Short hands-on education modules surrounding a specific technology or a group of technologies together.
+  description: | # this will include new lines to allow paragraphs
+    Teaching others and seeing that *lightbulb* go off is and experience that I get a lot of gratification from. In my effort to educate teams at IBM I realized that giving the same presentation to team after team was an inefficient method. So I created "Let's Talk" which is a group of education modules that have an intense focus on hands-on learning using examples hosted on GitHub. We scheduled live presentations and recorded them for future consumption and they featured code examples accompanied by a tutorial-like presentation. 
+
+    _**Example Let's Talk Modules**_
+
+    1. Docker
+    2. Docker Manifests & Travis
+    3. Kubernetes
+    4. Jenkins
+    5. Jenkins & Bash
+    6. Ansible
+    7. Jenkins & Ansible
+    8. Slack Tips & Tricks
+    9. Terraform
 
     It began with connecting the [travis-ci worker](https://github.com/travis-ci/worker/network/members) to an <mark>Openstack</mark> instance hosted on z/KVM. However we ran into issues with big bursts of builds which caused the networking layer in Openstack to intermittently not initiate. Eventually we upgraded to use <mark>LXD</mark> to run the builds which gave a huge speed increase and more portability. Using <mark>Packer</mark> I built [xenial/bionic base images](https://github.com/bendermIBM/packer-templates/tree/lxd-templates-travonz) for Linux on Z and deployed a production configuration supporting 20,000+ builds a year. 
 
