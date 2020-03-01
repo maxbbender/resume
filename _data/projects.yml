@@ -17,6 +17,12 @@
 
     Internally we had a <mark>Travis</mark> environment for x86 and ppc64le, but none for s390x. I was tasked with supporting Travis on Linux on Z and so began a month dive into the source code of Travis. With this we were able to enable a regression pipeline for the release for IBM Cloud Private (ICP) on Z, a <mark>Kubernetes</mark> offering by IBM. 
 
+    It began with connecting the [travis-ci worker](https://github.com/travis-ci/worker/network/members) to an <mark>Openstack</mark> instance hosted on z/KVM. However we ran into issues with big bursts of builds which caused the networking layer in Openstack to intermittently not initiate. Eventually we upgraded to use <mark>LXD</mark> to run the builds which gave a huge speed increase and more portability. Using <mark>Packer</mark> I built [xenial/bionic base images](https://github.com/bendermIBM/packer-templates/tree/lxd-templates-travonz) for Linux on Z and deployed a production configuration supporting 20,000+ builds a year. 
+
+    See some changes to the [travis-build scripts](https://github.com/bendermIBM/travis-build) which also needed some configuartions
+
+    Once I moved to the LXD based builds I was able to automate the deployment of LXD and the Travis Worker on a Ubuntu Bionic host using <mark>Ansible</mark>. Still using the previous OpenStack environment we could now provision infrastructure with <mark>Terraform</mark> and configure workers using Ansible.
+
 - layout: top-middle
   name: Viral Education / TALOS
   link: github.com/maxbbender/Viral-Education
