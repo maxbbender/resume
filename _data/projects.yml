@@ -1,4 +1,15 @@
 - layout: top-middle
+  name: KVM Solution Test
+  quote: >
+    A customer-like solution test from the KVM Hypervisor
+  description: | # this will include new lines to allow paragraphs
+    Back in July of 2020, I took over the role as a Technical Team Lead for the KVM Solution Test project. When I joined, there were was a foundation of automation but I quickly identified areas that could be improved on. Over the next 6 months my team and I worked to achieve a goal of 100% automated coverage of the test cases we were responsible for. We have achieved that goal and now are functioning as a mature development orginization, evaluating new line items/features as they arise and have begun the process to modularlize & externalize our environment. 
+    
+    We worked with the 3 major linux distributions (RHEL/SLES/Ubuntu) during their Beta testing periods to verify KVM on their platforms. It was a challenging endeavor maintaining our relationships with 3 different sets of engineers, but I ended up learning a lot from the process about manging priorities and expectations for my team. Where applicable we accomidated large scale testing scenarios (involving 10TB+ of RAM or 1000+ KVM guests) which provided a unique value-add to the community, verifying the platform at an enterprise scale. 
+    
+    The DevOps framework was built with <mark>Ansible</mark> and consisted of 25k+ lines of code. We approached the framework with an Agile methodology in mind by building an MVP, getting hands on the solution in order to identify the next required evolution. It is going great with over 200 pull requests merged to date, and many more new ones currently open. The power of our collaboration across the team has built in an incredible level of resiliency to the code base, setting the team up to continue to innovate for years to come.
+
+- layout: top-middle
   name: Travis on Z
   link: github.com/bendermIBM/travis-cookbooks
   github: https://github.com/bendermIBM/travis-cookbooks
