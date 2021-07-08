@@ -1,8 +1,21 @@
+
+- layout: left
+  company: IBM
+  link: https://www.ibm.com/us-en/
+  job_title: Team Lead
+  dates: July 2020 - Present
+  quote: >
+    IBM produces and sells computer hardware, middleware and software, and provides hosting and consulting services in areas ranging from mainframe computers to nanotechnology.
+  description: | # this will include new lines to allow paragraphs
+    In July I took over a new position as a technical team lead for the KVM Solution test project with a team of 5 people. This position's responsibilities mainly revolved around project management but also involved architecting a new automation framework to achieve our goal of 100% automation coverage. Working on KVM (a Linux hypervisor) we utilized <mark>Ansible</mark> to manage system configurations as it is a very powerful tool due to the idempotency it implements. 
+    
+    While in the position, I learned a lot about how to balance business requirements & deadlines with the technical innovation. We worked with the 3 major Linux distributions (RHEL/SLES/Ubuntu) engineers to test & verify KVM on their platform, so there was a lot of external deadlines & processes I had to take into account with our test plan. Since starting this position I have helped reduce our overal test cycle length by 25% and shifted it to be 5+ months earlier by levarging the prevously mentioned end to end automation framework built to verify KVM on Z. 
+    
 - layout: left
   company: IBM
   link: https://www.ibm.com/us-en/
   job_title: Principal Test Engineer
-  dates: December 2015 - Present
+  dates: December 2015 - July 2020
   quote: >
     IBM produces and sells computer hardware, middleware and software, and provides hosting and consulting services in areas ranging from mainframe computers to nanotechnology.
   description: | # this will include new lines to allow paragraphs
